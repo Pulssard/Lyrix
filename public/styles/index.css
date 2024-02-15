@@ -1,0 +1,158 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+  }
+
+header{
+    background-image: linear-gradient(to bottom right,rgb(71, 68, 68), rgb(34, 31, 31) );
+    margin-bottom: 1em;
+    padding:0.5em 1em;
+    display:flex;
+    gap:1em;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.7)
+}
+h3{
+    margin: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color:red;
+}
+
+button{
+    background-color: transparent;
+    margin:none;
+    border:none;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lyricsText{
+    color: red;
+}
+
+.search{
+    width: 35rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+.btn{
+    background-color: red;
+    border-radius: 6px;
+    padding: 0.5rem;
+    color: white;
+    width: 7rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+.getLyrics{
+    background: none;
+    border: none;
+    padding-bottom: 1rem;
+}
+
+.mainDiv{
+    display: flex;
+    position:relative;
+}
+
+.carousel-container {
+    display: flex;
+    margin: 0.5rem 1rem ;
+    width: 90%; 
+    overflow: hidden;
+  }
+
+img{
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+}
+.imgDiv{
+   padding: 0.5rem;
+}
+.cardDiv{
+    display: flex;
+    flex: 0 0 calc(24%);
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.5rem;
+    border-radius: 10px;
+    background-color: rgb(34, 31, 31); 
+    padding: 0 0.2em;
+}
+footer{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-image: linear-gradient(to bottom right,rgb(71, 68, 68), rgb(34, 31, 31) );
+}
+.footerFlex{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.arrow{
+    background: transparent;
+    border: none;
+    color:white;
+    z-index:1;
+
+}
+.arrow:hover{
+    color: red;
+}
+.btn:hover, .search:hover{
+    background-color:lightgray ;
+}
+.btn:hover{
+    color:red;
+}
+/* could use bootstrap container, but for learning purposes, for a better understanding of display resolutions and responsiveness */
+@media (max-width: 768px){
+    .search, .btn{
+        width:90%;
+        box-sizing: border-box;
+    }       
+}
+@media(max-width: 576px){
+    .cardDiv{
+        flex: 0 0 calc(95%);   
+    }
+}
+
+@media(min-width: 577px) and (max-width: 1125px){
+    .cardDiv{
+        flex: 0 0 calc(48%);
+    }
+}
+
+@media (min-width: 1126px) and (max-width: 1495px){
+    .cardDiv{
+        flex: 0 0 calc(32%)
+    }
+}
+
+@media(min-width:1496px){
+    .cardDiv{
+        flex: 0 0 calc(24%);
+    }
+}
