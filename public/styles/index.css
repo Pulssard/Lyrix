@@ -27,10 +27,33 @@ h3{
     margin: 1rem;
 }
 
-a{
-    text-decoration: none;
-    color:red;
-}
+  
+  h2 {
+    
+    background: linear-gradient(90deg, #ff0000, #171817, #9e3994); /* Define your gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientColoration 10s ease-in-out infinite;
+    
+
+  }
+  
+  @keyframes gradientColoration {
+    0% {
+      color: transparent;
+    }
+    50% {
+      color: #9e3994;
+    }
+    55% {
+      color: #662121; /* Color to transition to after gradient */
+    }
+    100% {
+      color: #ec4646; /* Make sure text is fully visible before fading out */
+    }
+  }
+  
 
 button{
     background-color: transparent;
@@ -39,6 +62,7 @@ button{
 }
 form{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -65,11 +89,13 @@ form{
     background: none;
     border: none;
     padding-bottom: 1rem;
+    color:red;
 }
 
 .mainDiv{
     display: flex;
     position:relative;
+    justify-content: center;
 }
 
 .carousel-container {
@@ -110,12 +136,71 @@ footer{
     column-gap: 2rem;
 }
 
+.cloud-container {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    animation: moveClouds 15s linear infinite;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(30%, 10%);
+    }
+    50% {
+        transform: translate(-30%, -10%);
+    }
+    75% {
+        transform: translate(20%, -20%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/*@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30%);
+
+    }
+    75%{
+        transform: translateX(-30%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}*/
+
+h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+
 .arrow{
     background: transparent;
     border: none;
     color:white;
     z-index:1;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
 
+.arrow.right{
+    right:0;
+}
+.arrow.left{
+    left:0;
 }
 .arrow:hover{
     color: red;

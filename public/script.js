@@ -3,7 +3,7 @@ const cards = container.querySelectorAll('.cardDiv');
 let currentIndex = 0;
 
 function changeCard(direction) {
-    const cardWidth = parseFloat(cards[0].offsetWidth )+ 16; // Including margin
+    const cardWidth = parseFloat(cards[0].offsetWidth ) + 16; // Including margin
     const maxIndex = cards.length - 1; // Number of visible cards
 
     if (direction === 'left' && currentIndex > 0) {
@@ -21,6 +21,6 @@ function changeCard(direction) {
     });
 };
 
-function openInNewTab(url) {
+function openInNewTab(url) {//open the link in a new tab
     window.open(url, '_blank');
   };
