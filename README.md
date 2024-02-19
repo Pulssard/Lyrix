@@ -1,6 +1,6 @@
 # Lyrix
 
-This project utilizes Express.js to create a server that allows users to search for song lyrics using the Genius API.
+This project uses Express.js to create a server that allows users to search for song lyrics using the Genius API.
 
 ## Installation
 
