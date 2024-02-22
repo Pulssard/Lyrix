@@ -27,6 +27,10 @@ h3{
     margin: 1rem;
 }
 
+h1{
+    cursor:pointer;
+}
+
   
   h2 {
     
@@ -34,7 +38,7 @@ h3{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: gradientColoration 10s ease-in-out infinite;
+    animation: gradientColoration 20s linear infinite;
     
 
   }
@@ -44,7 +48,7 @@ h3{
       color: transparent;
     }
     50% {
-      color: #9e3994;
+      color: #b53061;
     }
     55% {
       color: #662121; /* Color to transition to after gradient */
@@ -162,21 +166,6 @@ footer{
     }
 }
 
-/*@keyframes moveClouds {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(30%);
-
-    }
-    75%{
-        transform: translateX(-30%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}*/
 
 h1 {
     display: inline-block;

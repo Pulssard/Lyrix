@@ -21,6 +21,18 @@ function changeCard(direction) {
     });
 };
 
+function firstCard(){
+    currentIndex=0;
+    const cardWidth = parseFloat(cards[0].offsetWidth ) + 16;
+
+    const translateValue = (-currentIndex) * cardWidth +'px';
+    cards.forEach((card) =>{
+        card.style.transitionDuration = '0.8s';
+        card.style.transform = 'translateX(' + translateValue + ')';
+    });
+}
+
+
 function openInNewTab(url) {//open the link in a new tab
     window.open(url, '_blank');
   };
